@@ -11,7 +11,8 @@ client.on('ready', () => {
 //Code that is running on RSGN server live
 client.on('message', function(message) {
     if(message.author.bot) return;
-    if(message.content.includes ('@mod.gov.uk')) {
+    msg = message.content.toLowerCase();
+    if(msg.includes ('@mod.gov.uk')) {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('656194136222728237');
         arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a member. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
@@ -20,10 +21,71 @@ client.on('message', function(message) {
 
 });
 
+client.on('message', function(message) {
+    if(message.author.bot) return;
+    msg = message.content.toLowerCase();
+    if(msg.includes ('civilian')) {
+        const user = message.author;
+        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+        message.member.roles.add(Friend);
+    }
+
+});
+
+client.on('message', function(message) {
+    if(message.author.bot) return;
+    msg = message.content.toLowerCase();
+    if(msg.includes ('veteran')) {
+        const user = message.author;
+        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+        message.member.roles.add(Friend);
+    }
+
+});
+
+client.on('message', function(message) {
+    if(message.author.bot) return;
+    msg = message.content.toLowerCase();
+    if(msg.includes ('army affiliate')) {
+        const user = message.author;
+        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+        message.member.roles.add(ArmyAFF);
+    }
+
+});
+
+client.on('message', function(message) {
+    if(message.author.bot) return;
+    msg = message.content.toLowerCase();
+    if(msg.includes ('navy affiliate')) {
+        const user = message.author;
+        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+        message.member.roles.add(NavyAFF);
+    }
+
+});
+
+client.on('message', function(message) {
+    if(message.author.bot) return;
+    msg = message.content.toLowerCase();
+    if(msg.includes ('raf affiliate')) {
+        const user = message.author;
+        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+        message.member.roles.add(RAFAFF);
+    }
+
+});
+
 //Test that is being used on my server
 client.on('message', function(message) {
     if(message.author.bot) return;
-    if(message.content.includes ('Test bot')) {
+    msg = message.content.toLowerCase();
+    if(msg.includes ('test bot')) {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('695376364437635123');
         arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a member. Shout if you have any questions and check the member channel to join any team. Use general to gain access to platform chat channels you use.`);
