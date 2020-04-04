@@ -1,0 +1,22 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node ./src/index.js"
+  },
+  "respository": {
+    "type": "git",
+    "url": "git+https://github.com/CNTODachi/rsgn-bot.git"
+  },
+  "author": "Dachi",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}
