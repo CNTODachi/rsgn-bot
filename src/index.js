@@ -26,7 +26,7 @@ client.on('message', function(message) {
 
 client.on('message', function(message) {
     if(message.author.bot) return;
-    if(message.content.includes ('civilian friend')) {
+    if(message.content.includes ('civilian')) {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('656194136222728237');
         arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
@@ -82,7 +82,7 @@ client.on('message', function(message) {
 //Test that is being used on my server
 client.on('message', function(message) {
     if(message.author.bot) return;
-    if(message.content.toLocaleLowerCase.includes ('test bot')) {
+    if(message.content.toLocaleLowerCase ('Test bot')) {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('695376364437635123');
         arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a member. Shout if you have any questions and check the member channel to join any team. Use general to gain access to platform chat channels you use.`);
