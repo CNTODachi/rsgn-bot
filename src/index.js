@@ -2,6 +2,10 @@ require('dotenv').config();
 const discord = require('discord.js');
 const client = new discord.Client();
 const Member = '643002643110952962';
+const Friend = '652571265869152266';
+const ArmyAFF = '683982696703328271';
+const NavyAFF = '680110567385464864';
+const RAFAFF = '684883054824652826';
 const dserv = '647540203082219550';
 
 client.on('ready', () => {
