@@ -12,6 +12,7 @@ client.on('ready', () => {
     console.log(`${client.user.tag} has logged in.`);
 });
 
+
 //Code that is running on RSGN server live
 client.on('message', function(message) {
     if(message.author.bot) return;
@@ -23,60 +24,35 @@ client.on('message', function(message) {
         message.member.roles.add(Member);
     }
 
-});
-
-client.on('message', function(message) {
-    if(message.author.bot) return;
-    msg = message.content.toLowerCase();
-    if(msg.includes ('civilian')) {
+    else if(msg.includes ('civilian')) {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('656194136222728237');
         arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
         message.member.roles.add(Friend);
     }
 
-});
-
-client.on('message', function(message) {
-    if(message.author.bot) return;
-    msg = message.content.toLowerCase();
-    if(msg.includes ('veteran')) {
+    else if(msg.includes ('veteran')) {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('656194136222728237');
         arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
         message.member.roles.add(Friend);
     }
 
-});
-
-client.on('message', function(message) {
-    if(message.author.bot) return;
-    msg = message.content.toLowerCase();
-    if(msg.includes ('army affiliate')) {
+    else if(msg.includes ('army affiliate')) {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('656194136222728237');
         arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
         message.member.roles.add(ArmyAFF);
     }
 
-});
-
-client.on('message', function(message) {
-    if(message.author.bot) return;
-    msg = message.content.toLowerCase();
-    if(msg.includes ('navy affiliate')) {
+    else if(msg.includes ('navy affiliate')) {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('656194136222728237');
         arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
         message.member.roles.add(NavyAFF);
     }
 
-});
-
-client.on('message', function(message) {
-    if(message.author.bot) return;
-    msg = message.content.toLowerCase();
-    if(msg.includes ('raf affiliate')) {
+    else if(msg.includes ('raf affiliate')) {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('656194136222728237');
         arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
@@ -97,6 +73,5 @@ client.on('message', function(message) {
     }
 
 });
-
 
 client.login(process.env.BOT_TOKEN);
