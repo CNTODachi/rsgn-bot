@@ -24,6 +24,13 @@ client.on('message', function(message) {
         message.member.roles.add(Member);
     }
 
+    else if(msg.includes ('armymail.mod.uk')) {
+        const user = message.author;
+        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a member. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+        message.member.roles.add(Member);
+    }
+
     else if(msg.includes ('civilian')) {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('656194136222728237');
