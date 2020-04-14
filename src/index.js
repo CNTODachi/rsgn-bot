@@ -10,6 +10,7 @@ const dserv = '647540203082219550';
 
 client.on('ready', () => {
     console.log(`${client.user.tag} has logged in.`);
+    client.user.setActivity('Getting comms in!');
 });
 
 
@@ -80,6 +81,8 @@ client.on('message', function(message) {
     }
 
 });
+
+process.on('unhandledRejection', error => console.error('Uncaught Promise Rejection', error));
 
 
 client.login(process.env.BOT_TOKEN);
