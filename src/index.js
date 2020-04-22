@@ -1,7 +1,6 @@
 require('dotenv').config();
 const discord = require('discord.js');
 const client = new discord.Client();
-const fetch = require("node-fetch");
 const Member = '643002643110952962';
 const Friend = '652571265869152266';
 const ArmyAFF = '683982696703328271';
@@ -84,39 +83,6 @@ client.on('message', function(message) {
 });
 
 process.on('unhandledRejection', error => console.error('Uncaught Promise Rejection', error));
-
-const wakeUpDyno = (url, interval = 25, callback) => {
-    const milliseconds = interval * 60000;
-    setTimeout(() => {
-
-        try { 
-            console.log(`setTimeout called.`);
-            // HTTP GET request to the dyno's url
-            fetch(url).then(() => console.log(`Fetching ${url}.`)); 
-        }
-        catch (err) { // catch fetch errors
-            console.log(`Error fetching ${url}: ${err.message} 
-            Will try again in ${interval} minutes...`);
-        }
-        finally {
-
-            try {
-                callback(); // execute callback, if passed
-            }
-            catch (e) { // catch callback error
-                callback ? console.log("Callback failed: ", e.message) : null;
-            }
-            finally {
-                // do it all again
-                return wakeUpDyno(url, interval, callback);
-            }
-            
-        }
-
-    }, milliseconds);
-};
-
-module.exports = wakeUpDyno;
 
 
 client.login(process.env.BOT_TOKEN);
