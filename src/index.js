@@ -31,7 +31,6 @@ const Auxilia = '698095353492406343';
 const Excertus = '698143883439374356';
 const Dae = '698459450247217193';
 const tit = '748978438261702738';
-const tit = '748978438261702738';
 
 client.on('ready', () => {
     console.log(`${client.user.tag} has logged in.`);
@@ -291,13 +290,6 @@ client.on('message', function(message) {
         message.member.roles.add(tit);
     }
 
-    else if(message.content === 'legio titanicus') {
-        const user = message.author;
-        let arrivalswelcome = client.channels.cache.get('697220115774701660');
-        arrivalswelcome.send(`<@${user.id}> We are all but a weapon in the right hand of the Emperor! Use <#697008604162687028> to say hello and welcome my friends.`);
-        message.member.roles.add(tit);
-    }
-
     else if(message.content === 'remove night lords') {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('697220115774701660');
@@ -464,13 +456,6 @@ client.on('message', function(message) {
         let arrivalswelcome = client.channels.cache.get('697220115774701660');
         arrivalswelcome.send(`<@${user.id}> Role removed.`);
         message.member.roles.remove(Dae);
-    }
-
-    else if(message.content === 'remove legio titanicus') {
-        const user = message.author;
-        let arrivalswelcome = client.channels.cache.get('697220115774701660');
-        arrivalswelcome.send(`<@${user.id}> Role removed.`);
-        message.member.roles.remove(tit);
     }
 
     else if(message.content === 'remove legio titanicus') {
