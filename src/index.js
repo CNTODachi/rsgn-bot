@@ -98,7 +98,7 @@ client.on('guildMemberAdd', member => {
     if(!channel) return;
     channel.send(`Welcome ${member}, The universe has many horrors yet to throw at us. This is not the end of our struggle. This is just the beginning of our crusade to save Humanity. Be faithful! Be strong! Be vigilant!
     
-But most of all say hello in the <#697008604162687028> channel and type in your legion in all lower case as seen below in this channel.
+Use the <#697220115774701660> channel to select your faction just type in your faction in all lower case as seen below in this channel.
 (individual messages if multiple legions/factions)
 night lords             salamanders             death guard
 world eaters            raven guard             word bearers
