@@ -473,13 +473,23 @@ client.on('message', function(message) {
     if(message.author.bot) return;
     if(message.content === 'army count') {
         const user = message.author;
-        let guild = await message.guild.members.fetch();
-        let roleID = '647540203082219550';
-        let memberCount = guild.roles.get(roleID).members.size;
         let arrivalswelcome = client.channels.cache.get('647541633981743104');
-        arrivalswelcome.send(memberCount + `<@${user.id}> this is the number of Army role members on server`);
+        arrivalswelcome.send(`<@${user.id}> this is the number of Army role members on server`);
     }
 });
+
+
+//client.on('message', function(message) {
+//    if(message.author.bot) return;
+//    if(message.content === 'army count') {
+//        const user = message.author;
+//        let guild = await message.guild.members.fetch();
+//        let roleID = '647540203082219550';
+//        let memberCount = guild.roles.get(roleID).members.size;
+//        let arrivalswelcome = client.channels.cache.get('647541633981743104');
+//        arrivalswelcome.send(memberCount + `<@${user.id}> this is the number of Army role members on server`);
+//    }
+//});
 
 process.on('unhandledRejection', error => console.error('Uncaught Promise Rejection', error));
 
