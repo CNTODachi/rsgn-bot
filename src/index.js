@@ -34,7 +34,7 @@ const tit = '748978438261702738';
 
 client.on('ready', () => {
     console.log(`${client.user.tag} has logged in.`);
-    client.user.setActivity('Getting comms in!');
+    client.user.setActivity('with the fate of the universe!');
 });
 
 
@@ -467,10 +467,10 @@ client.on('message', function(message) {
 
 });
 
-client.on('message', function(message) {
+client.on('message', (message) => {
     if(message.author.bot) return;
-    if(message.content === '>army-count') {
-        let guild = await message.guild.fetchMembers();
+    if(message.content === 'army-count') {
+        let guild = await message.guild.membersfetch();
         let roleID = '647540203082219550';
         let memberCount = guild.roles.get(roleID).members.size;
         message.channel.send(memberCount + " members have this role!");
