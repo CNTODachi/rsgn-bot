@@ -469,7 +469,7 @@ client.on('message', function(message) {
 
 });
 
-client.on('message', function(message) {
+client.on('message', (message) => {
     if(message.author.bot) return;
     if(message.content === 'army count') {
         const user = message.author;
@@ -477,7 +477,7 @@ client.on('message', function(message) {
         let guild = await message.guild.members.fetch();
         let roleID = '647540203082219550';
         let memberCount = guild.roles.cache.get(roleID).members.size
-        arrivalswelcome.send(memberCount `<@${user.id}> this is the number members with the Army role on this server`);
+        arrivalswelcome.send(memberCount `<@${user.id}> this is the number of members with the Army role on this server`);
     }
 });
 
