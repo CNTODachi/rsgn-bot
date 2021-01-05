@@ -470,7 +470,7 @@ client.on('message', function(message) {
 client.on('message', (message) => {
     if(message.author.bot) return;
     if(message.content === 'army-count') {
-        let guild = await message.guild.membersfetch();
+        let guild = await message.guild.members.fetch();
         let roleID = '647540203082219550';
         let memberCount = guild.roles.get(roleID).members.size;
         message.channel.send(memberCount + " members have this role!");
