@@ -474,7 +474,10 @@ client.on('message', function(message) {
     if(message.content === 'army count') {
         const user = message.author;
         let arrivalswelcome = client.channels.cache.get('647541633981743104');
-        arrivalswelcome.send(`<@${user.id}> this is the number of Army role members on server`);
+        let guild = await message.guild.members.fetch();
+        let roleID = '647540203082219550';
+        let memberCount = guild.roles.cache.get(roleID).members.size
+        arrivalswelcome.send(memberCount `<@${user.id}> this is the number members with the Army role on this server`);
     }
 });
 
