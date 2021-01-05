@@ -469,28 +469,15 @@ client.on('message', function(message) {
 
 });
 
-client.on('message', (message) => {
-    if(message.author.bot) return;
-    if(message.content === 'army count') {
-        const user = message.author;
-        let arrivalswelcome = client.channels.cache.get('647541633981743104');
-        let guild = await message.guild.members.fetch();
-        let roleID = '647540203082219550';
-        let memberCount = guild.roles.cache.get(roleID).members.size
-        arrivalswelcome.send(memberCount `<@${user.id}> this is the number of members with the Army role on this server`);
-    }
-});
-
-
 //client.on('message', function(message) {
 //    if(message.author.bot) return;
 //    if(message.content === 'army count') {
 //        const user = message.author;
 //        let guild = await message.guild.members.fetch();
 //        let roleID = '647540203082219550';
-//        let memberCount = guild.roles.get(roleID).members.size;
+//        let memberCount = guild.roles.cache.get(roleID).members.size;
 //        let arrivalswelcome = client.channels.cache.get('647541633981743104');
-//        arrivalswelcome.send(memberCount + `<@${user.id}> this is the number of Army role members on server`);
+//        arrivalswelcome.send(memberCount + `<@${user.id}> this is the number of members with the Army role on this server`);
 //    }
 //});
 
