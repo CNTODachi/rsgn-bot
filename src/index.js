@@ -1,11 +1,11 @@
 require('dotenv').config();
 const discord = require('discord.js');
 const client = new discord.Client();
-const Member = '643002643110952962';
-const Friend = '652571265869152266';
-const ArmyAFF = '683982696703328271';
-const NavyAFF = '680110567385464864';
-const RAFAFF = '684883054824652826';
+//const Member = '643002643110952962';
+//const Friend = '652571265869152266';
+//const ArmyAFF = '683982696703328271';
+//const NavyAFF = '680110567385464864';
+//const RAFAFF = '684883054824652826';
 const Nightlords = '697015353313722419';
 const Salamanders = '697015430824329218';
 const DeathGuard = '697015511094919168';
@@ -39,60 +39,62 @@ client.on('ready', () => {
 
 
 //Code that is running on RSGN server live
-client.on('message', function(message) {
-    if(message.author.bot) return;
-    msg = message.content.toLowerCase();
-    if(msg.includes ('@mod.gov.uk')) {
-        const user = message.author;
-        let arrivalswelcome = client.channels.cache.get('656194136222728237');
-        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a member. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
-        message.member.roles.add(Member);
-    }
+//client.on('message', function(message) {
+//    if(message.author.bot) return;
+//    msg = message.content.toLowerCase();
+//    if(msg.includes ('@mod.gov.uk')) {
+//        const user = message.author;
+//        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+//        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a member. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+//        message.member.roles.add(Member);
+//    }
 
-    else if(msg.includes ('armymail.mod.uk')) {
-        const user = message.author;
-        let arrivalswelcome = client.channels.cache.get('656194136222728237');
-        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a member. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
-        message.member.roles.add(Member);
-    }
+//    else if(msg.includes ('armymail.mod.uk')) {
+//        const user = message.author;
+//        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+//        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a member. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+//        message.member.roles.add(Member);
+//    }
 
-    else if(msg.includes ('civilian')) {
-        const user = message.author;
-        let arrivalswelcome = client.channels.cache.get('656194136222728237');
-        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
-        message.member.roles.add(Friend);
-    }
+//    else if(msg.includes ('civilian')) {
+//        const user = message.author;
+//        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+//        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+//        message.member.roles.add(Friend);
+//    }
 
-    else if(msg.includes ('veteran')) {
-        const user = message.author;
-        let arrivalswelcome = client.channels.cache.get('656194136222728237');
-        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
-        message.member.roles.add(Friend);
-    }
+//    else if(msg.includes ('veteran')) {
+//        const user = message.author;
+//        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+//        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+//        message.member.roles.add(Friend);
+//    }
 
-    else if(msg.includes ('army affiliate')) {
-        const user = message.author;
-        let arrivalswelcome = client.channels.cache.get('656194136222728237');
-        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
-        message.member.roles.add(ArmyAFF);
-    }
+//    else if(msg.includes ('army affiliate')) {
+//        const user = message.author;
+//        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+//        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+//        message.member.roles.add(ArmyAFF);
+//    }
 
-    else if(msg.includes ('navy affiliate')) {
-        const user = message.author;
-        let arrivalswelcome = client.channels.cache.get('656194136222728237');
-        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
-        message.member.roles.add(NavyAFF);
-    }
+//    else if(msg.includes ('navy affiliate')) {
+//        const user = message.author;
+//        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+//        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+//        message.member.roles.add(NavyAFF);
+//    }
 
-    else if(msg.includes ('raf affiliate')) {
-        const user = message.author;
-        let arrivalswelcome = client.channels.cache.get('656194136222728237');
-        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
-        message.member.roles.add(RAFAFF);
-    }
+//    else if(msg.includes ('raf affiliate')) {
+//        const user = message.author;
+//        let arrivalswelcome = client.channels.cache.get('656194136222728237');
+//        arrivalswelcome.send(`<@${user.id}> Welcome, I have given you permissions as a Friend. Shout if you have any questions and check the <#651892874740498442> to join any team. Use <#646767159506370561> to gain access to platform chat channels you use.`);
+//        message.member.roles.add(RAFAFF);
+//    }
 
-});
+//});
 
+
+//Code that is running on 30K server live
 client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(channel => channel.name === "welcome");
     if(!channel) return;
@@ -112,7 +114,7 @@ legio titanicus`);
 
 });
 
-//Code that is running on  server live
+//Code that is running on 30K server live
 client.on('message', function(message) {
     if(message.author.bot) return;
     if(message.content === 'night lords') {
@@ -467,13 +469,15 @@ client.on('message', function(message) {
 
 });
 
-client.on('message', (message) => {
+client.on('message', function(message) {
     if(message.author.bot) return;
-    if(message.content === 'army-count') {
+    if(message.content === 'army count') {
+        const user = message.author;
         let guild = await message.guild.members.fetch();
         let roleID = '647540203082219550';
         let memberCount = guild.roles.get(roleID).members.size;
-        message.channel.send(memberCount + " members have this role!");
+        let arrivalswelcome = client.channels.cache.get('647541633981743104');
+        arrivalswelcome.send(memberCount + `<@${user.id}> this is the number of Army role members on server`);
     }
 });
 
